@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  </head>
+  
+  <body class="index-page "data-bs-spy="scroll">
+  
+    <nav class="navbar navbar-expand-lg bg-white shadow-sm sticky-top">
+      <div class="container-fluid">
+        <!-- Logo -->
+        <a class="navbar-brand" href="#">
+          <img src="/assets/img/logoM.png" alt="logo" width="170" height="50">
+        </a>
+        
+        <!-- Mobile Toggle Button -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+    
+        <!-- Navigation Items -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0" dir="rtl">
+            <!-- Home -->
+            <li class="nav-item me-3">
+              <a class="nav-link" href="#hero">الرئيسية</a>
+            </li>
+    
+            <!-- About -->
+            <li class="nav-item me-3">
+              <a class="nav-link" href="#aboutt">من نحن</a>
+            </li>
+    
+            <!-- Services Dropdown -->
+            <li class="nav-item dropdown me-3">
+              <a class="nav-link dropdown-toggle" href="#services" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
+                خدماتنا
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <!-- Infrastructure Dropdown -->
+                <li class="dropdown-submenu">
+                  <a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown">البنية التحتية</a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#infrastructure-section" class="dropdown-item bg-light" id="surveillance-link">كاميرات المراقبة</a></li>
+                    <li><a href="#infrastructure-section" class="dropdown-item bg-light">البوابات الامنية</a></li>
+                    <li><a href="#infrastructure-section" class="dropdown-item bg-light">البنية التحتية</a></li>
+                    <li><a href="#infrastructure-section" class="dropdown-item bg-light">نظام إدارة المباني (BMS)</a></li>
+                    <li><a href="#infrastructure-section" class="dropdown-item bg-light">التحكم الذكي بالمنازل</a></li>
+                    <li><a href="#infrastructure-section" class="dropdown-item bg-light">الأجهزة البيومترية</a></li>
+                  </ul>
+                </li>
+    
+                <!-- Networks Dropdown -->
+                <li class="dropdown-submenu">
+                  <a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown">الشبكات والمواقع</a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#networks-section" class="dropdown-item bg-light">الشبكات والاتصالات</a></li>
+                    <li><a href="#networks-section" class="dropdown-item bg-light">تطوير المواقع</a></li>
+                    <li><a href="#networks-section" class="dropdown-item bg-light">واجهات المستخدم UI/UX</a></li>
+                    <li><a href="#networks-section" class="dropdown-item bg-light">السنترالات</a></li>
+                    <li><a href="#networks-section" class="dropdown-item bg-light">GPS</a></li>
+                  </ul>
+                </li>
+    
+                <!-- Digital Marketing Dropdown -->
+                <li class="dropdown-submenu">
+                  <a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown">التسويق الرقمي</a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#marketing-section" class="dropdown-item bg-light">إدارة حسابات التواصل الاجتماعي</a></li>
+                    <li><a href="#marketing-section" class="dropdown-item bg-light">تحليل واستراتيجيات</a></li>
+                    <li><a href="#marketing-section" class="dropdown-item bg-light">تصميم الجرافيكي</a></li>
+                    <li><a href="#marketing-section" class="dropdown-item bg-light">خطط تسويقية</a></li>
+                    <li><a href="#marketing-section" class="dropdown-item bg-light">SEO/SEM (تحسين محركات البحث والتسويق عبر الإنترنت)</a></li>
+                    <li><a href="#marketing-section" class="dropdown-item bg-light">الرسومات الحاسوبية (CGI) والتأثيرات البصرية (VFX)</a></li>
+                    <li><a href="#marketing-section" class="dropdown-item bg-light">الدفع مقابل النقرة (PPC)</a></li>
+                  </ul>
+                </li>
+    
+                <!-- Data Digitization Dropdown -->
+                <li class="dropdown-submenu">
+                  <a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown">رقمنة البيانات</a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#digitization-section" class="dropdown-item bg-light">أمن المعلومات</a></li>
+                    <li><a href="#digitization-section" class="dropdown-item bg-light">الأنظمة السحابية</a></li>
+                    <li><a href="#digitization-section" class="dropdown-item bg-light">الاستضافات</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+    
+            <!-- Contact -->
+            <li class="nav-item me-3">
+              <a class="nav-link active" aria-current="page" href="#contact">اتصل بنا</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+      <script>
+        document.getElementById("surveillance-link").addEventListener("click", function(event) {
+            event.preventDefault(); // Prevent the default behavior
+            
+            // Scroll to the infrastructure section
+            document.getElementById("infrastructure-section").scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        
+            // Find the Surveillance Cameras card and highlight it
+            const cards = document.querySelectorAll(".card-body .card-title");
+            let cardToHighlight = null;
+            
+            cards.forEach(function(cardTitle) {
+                if (cardTitle.textContent === "كاميرات المراقبة") {
+                    cardToHighlight = cardTitle.closest('.col-lg-4'); // Find the parent column
+                }
+            });
+        
+            if (cardToHighlight) {
+                cardToHighlight.classList.add("highlight");
+        
+                // Remove the highlight after 5 seconds
+                setTimeout(function() {
+                    cardToHighlight.classList.remove("highlight");
+                }, 5000);
+            }
+        });
+        
+            </script>
+             <style>
+                .highlight {
+                  background: linear-gradient(90deg, #007bff, #00e1ff); /* Apply the gradient as the background */
+                    border-radius: 10px; /* Optional: rounded corners for a smoother effect */
+                    padding: 5px; /* Optional: to create some space between the content and the border */
+                    box-shadow: 0 0 10px rgba(0, 123, 255, 0.7), 0 0 20px rgba(0, 225, 255, 0.7); /* Optional glowing effect */
+                    transition: all 0.3s ease; /* Smooth transition for hover effect */
+                
+                }
+                
+                
+                    </style>
+
+                    
+    <style>
+        /* Custom styles for RTL dropdown menus */
+        .navbar {
+      background-color: #ffffff;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      padding: 15px 0;
+    }
+    
+    .navbar-brand img {
+      height: 50px;
+      width: auto;
+    }
+    
+    /* Navigation links */
+    .navbar-nav .nav-link {
+      color: #2c3e50;
+      font-size: 16px;
+      padding: 8px 15px;
+      transition: color 0.3s ease;
+    }
+    
+    .navbar-nav .nav-link:hover {
+      color: #3498db;
+    }
+    
+    .nav-link.active {
+      color: #3498db !important;
+      font-weight: 600;
+    }
+    
+    /* Dropdown styling */
+    .dropdown-menu {
+      border: none;
+      border-radius: 12px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+      padding: 10px;
+      min-width: 220px;
+    }
+    
+    .dropdown-item {
+      color: #2c3e50;
+      padding: 10px 15px;
+      border-radius: 8px;
+      text-align: right;
+      transition: all 0.2s ease;
+    }
+    
+    .dropdown-item:hover {
+      background-color: #f8f9fa;
+      color: #3498db;
+      transform: translateX(-3px);
+    }
+    
+    /* Sub-dropdown menu */
+    .dropstart .dropdown-menu {
+      margin-right: 1px;
+      border-radius: 12px;
+    }
+    
+    /* Mobile menu button */
+    .navbar-toggler {
+      border: none;
+      padding: 0.5rem;
+    }
+    
+    .navbar-toggler:focus {
+      box-shadow: none;
+      outline: none;
+    }
+    
+    /* Mobile view adjustments */
+    @media (max-width: 991.98px) {
+      .navbar-collapse {
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 15px;
+        margin-top: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      }
+    
+      .nav-item {
+        margin: 5px 0;
+      }
+    
+      .dropdown-menu {
+        box-shadow: none;
+        border: 1px solid #eee;
+        margin-right: 15px;
+      }
+      
+      .dropdown-item:hover {
+        transform: none;
+      }
+    }
+    
+    /* RTL specific adjustments */
+    [dir="rtl"] .navbar-nav {
+      padding-right: 0;
+    }
+    
+    [dir="rtl"] .dropdown-item {
+      text-align: right;
+    }
+    
+    /* Remove default dropdown arrow */
+    /* .dropdown-toggle::after {
+      display: none;
+    } */
+        </style>
+     
+        <style>
+     
+    
+    /* Show submenu on hover (for desktop) */
+    @media (max-width: 576px) {
+      .dropdown-item::before{
+        transform: rotate(-90deg);
+      }
+    }
+    
+    .navbar-nav .nav-link.active {
+        color: #007bff !important; /* Change color as needed */
+        font-weight: bold;
+    }
+    .navbar-nav .nav-link {
+        font-size: 20px; /* Adjust the size as needed */
+        font-weight: bold; /* Optional: Make it bold */
+    }
+    
+        </style>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body>
+</html>
