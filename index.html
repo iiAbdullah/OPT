@@ -12,6 +12,7 @@
     <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
 
     <!-- Fonts -->
+    
     <link href="https://fonts.googleapis.com" rel="preconnect" />
     <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
     <link
@@ -51,7 +52,7 @@
 
   <body class="index-page "data-bs-spy="scroll" data-bs-target="#navbar">
   
-    <nav class="navbar navbar-expand-lg bg-white shadow-sm sticky-top">
+    <nav class="navbar navbar-expand-lg bg-white shadow-sm sticky-top" id="navbar">
       <div class="container-fluid">
         <!-- Logo -->
         <a class="navbar-brand" href="#">
@@ -84,7 +85,7 @@
               <ul class="dropdown-menu dropdown-menu-end">
                 <!--iNFUSTUC-->
                 <li class="dropstart">
-                  <a class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown">
+                  <a class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown" href="#">
                     البنية التحتية
                   </a>
                   <ul class="dropdown-menu">
@@ -129,7 +130,7 @@
 
                 <!-- Data Digitization Submenu -->
                 <li class="dropstart">
-                  <a class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown">
+                  <a class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown" href="#">
                     رقمنة البيانات
                   </a>
                   <ul class="dropdown-menu">
@@ -147,7 +148,7 @@
     
             <!-- Contact -->
             <li class="nav-item me-3">
-              <a class="nav-link active" aria-current="page" href="#contact">اتصل بنا</a>
+              <a class="nav-link active" aria-current="page" href="#contact">تواصل معنا  </a>
             </li>
           </ul>
         </div>
@@ -175,6 +176,29 @@
       });
       </script>
 
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+    // Select the "Services" dropdown link
+    let servicesLink = document.querySelector('.nav-link[href="#services"]'); 
+
+    if (servicesLink) {
+        servicesLink.addEventListener('click', function () {
+            // 🚀 Instantly trigger all AOS animations when "Services" is clicked
+            document.querySelectorAll('[data-aos]').forEach(el => {
+                el.classList.add('aos-animate');
+            });
+
+            // Reinitialize AOS to ensure animations work smoothly
+            setTimeout(() => {
+                AOS.refreshHard();
+            }, 500);
+        });
+    }
+
+  
+});
+
+      </script>
 
     <script>
 document.addEventListener("DOMContentLoaded", function () {
@@ -275,6 +299,10 @@ document.addEventListener("DOMContentLoaded", function () {
   background-color: #ffffff;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   padding: 15px 0;
+}
+
+.card {
+    scroll-margin-top: 100px; /* Adjust based on navbar height */
 }
 
 .navbar-brand img {
@@ -415,8 +443,8 @@ document.addEventListener("DOMContentLoaded", function () {
             </div>
             <div class="col text-end d-flex flex-column justify-content-center">
               <h1>بوابتك لعالم من الحلول</h1>
-              <p class="py-6">انطلق معنا نحو مستقبل أكثر إشراقًا، واكتشف إمكانيات لا حدود لها تساعدك على تحقيق أحلامك بكل ثقة ونجاح</p>
-              <a href="#" class="btn-get-started align-self-end">ابداالان</a>
+              <p class="py-6" style="font-size: 24px;">انطلق معنا نحو مستقبل أكثر إشراقًا، واكتشف إمكانيات لا حدود لها تساعدك على تحقيق أحلامك بكل ثقة ونجاح</p>
+              <a href="#aboutt" class="btn-get-started align-self-end">ابداالان</a>
           </div>
         
           </div>
@@ -443,7 +471,7 @@ document.addEventListener("DOMContentLoaded", function () {
   <!-- Section Title -->
   <div class="container section-title" data-aos="fade-up">
     <h2> من نحن </h2>
-    <p>مؤسسة الأمثل الذكية (أوبتيموم) لتقنية المعلومات والاتصالات</p>
+    <p style="font-size: 24px;">مؤسسة الأمثل الذكية (أوبتيموم) لتقنية المعلومات والاتصالات</p>
   </div><!-- End Section Title -->
 
   <div class="container">
@@ -455,7 +483,7 @@ document.addEventListener("DOMContentLoaded", function () {
         <p>
           نحن شركة رائدة في تقديم خدمات متكاملة لأصحاب الأعمال والشركات، بداية من البنية التحتية إلى التسويق الرقمي، الحلول الأمنية، الشبكات، ورقمنة البيانات.
         </p>
-        <a href="#" class="about-btn align-self-center align-self-xl-start"><span>اعرف المزيد</span> <i class="bi bi-chevron-left"></i></a>
+        <a href="#services" class="about-btn align-self-center align-self-xl-start"><span>اعرف المزيد</span> <i class="bi bi-chevron-left"></i></a>
       </div>
 
       <div class="col-xl-7" data-aos="fade-up" data-aos-delay="200">
@@ -464,14 +492,14 @@ document.addEventListener("DOMContentLoaded", function () {
           <div class="col-md-6 icon-box position-relative">
             <i class="bi bi-eye"></i> <!-- Represents vision -->
             <h4><a  class="stretched-link"> رؤيتنا</a></h4>
-            <p>ان نكون الشركة الرائدة والمفضلة في تقديم حلول التحول الرقمي والخدمات التقنية المتكاملة مع التوسع في الآسواق الناشئة وتقديم قيمة استثنائية لشركائنا وعملائنا</p>
+            <p style="font-size: 18px;">ان نكون الشركة الرائدة والمفضلة في تقديم حلول التحول الرقمي والخدمات التقنية المتكاملة مع التوسع في الآسواق الناشئة وتقديم قيمة استثنائية لشركائنا وعملائنا</p>
           </div><!-- Icon-Box -->
 
           <div class="col-md-6 icon-box position-relative">
             <i class="bi bi-chat-text"></i> <!-- يرمز للتواصل والرسالة النصية -->
 
             <h4><a  class="stretched-link">رسالتنا </a></h4>
-            <p>تمكين عملائنا من تحقيق أهدافهم التقنية والتسويقية من خلال تقديم خدمات متكاملة وشاملة تعتمد على الابتكار ,الجودة, والتقنيات الحديثة مع التركيز على دعم التحول الرقمي والمساهمة في بناء بيئة مستدامة</p>
+            <p style="font-size: 18px;">تمكين عملائنا من تحقيق أهدافهم التقنية والتسويقية من خلال تقديم خدمات متكاملة وشاملة تعتمد على الابتكار ,الجودة, والتقنيات الحديثة مع التركيز على دعم التحول الرقمي والمساهمة في بناء بيئة مستدامة</p>
           </div><!-- Icon-Box -->
 
        
@@ -488,52 +516,61 @@ document.addEventListener("DOMContentLoaded", function () {
 </section><!-- /About Section -->
 
 
-<section id="services" class="services section">
-  <div class="container">
-      <div class="row gy-4">
-          <div class="col-xl-3 col-md-6">
-              <div class="service-item service-digitization" dir="rtl">
-                <i class="bi bi-server"></i>
-                  <h4><a href="#digitization-section">رقمنة البيانات</a></h4>
-                  <p>
-                      في مؤسسة الأمثل الذكية، نقدم حلولاً متكاملة لرقمنة البيانات تشمل أمن المعلومات، الأنظمة السحابية، وخدمات الاستضافة. نسعى لتحويل عملياتك إلى نموذج رقمي آمن وفعال من خلال حماية بياناتك باستخدام تقنيات متقدمة.
-                  </p>
-              </div>
-          </div>
-
-          <div class="col-xl-3 col-md-6">
-              <div class="service-item service-marketing" dir="rtl">
-                  
-                  <i class="bi bi-megaphone "></i>
-                  <h4><a href="#marketing-section">التسويق الرقمي</a></h4>
-                  <p>
-                      في مؤسسة الأمثل الذكية، نقدم خدمات تسويق رقمي متكاملة تهدف إلى تعزيز حضورك الإلكتروني وتحقيق أهدافك التجارية. تشمل خدماتنا إدارة حسابات التواصل الاجتماعي باحترافية.
-                  </p>
-              </div>
-          </div>
-
-          <div class="col-xl-3 col-md-6">
-              <div class="service-item service-networks" dir="rtl">
-                  <i class="bi bi-wifi"></i>
-                  <h4><a href="#networks-section">الشبكات والمواقع</a></h4>
-                  <p>
-                      في مؤسسة الأمثل الذكية، نقدم خدمات متخصصة في الشبكات والمواقع لضمان تجربة تقنية متكاملة. تشمل خدماتنا تصميم واجهات مستخدم مبتكرة وسهلة الاستخدام تعزز تفاعل العملاء.
-                  </p>
-              </div>
-          </div>
-
-          <div class="col-xl-3 col-md-6">
-              <div class="service-item service-infrastructure" dir="rtl">
-                <i class="bi bi-building-gear"></i>
-                  <h4><a href="#infrastructure-section">البنية التحتية</a></h4>
-                  <p>
-                      في مؤسسة الأمثل الذكية، نقدم حلول البنية التحتية الشاملة التي تجمع بين الأمان والكفاءة. تشمل خدماتنا تركيب أنظمة كاميرات المراقبة الحديثة لضمان مراقبة فعالة.
-                  </p>
-              </div>
-          </div>
+  <!-- Services Section -->
+  <section id="services" class="services section">
+       <!-- Section Title -->
+       <div class="container section-title" data-aos="fade-up">
+        <h2>خدماتنا</h2>
+        <p style="font-size: 24px;">
+          في مؤسسة الأمثل الذكية، نقدم مجموعة متكاملة من الخدمات التي تركز على
+          تحقيق أعلى مستويات الجودة والتميز لعملائنا 
+        </p>
       </div>
-  </div>
-</section>
+    <div class="container">
+        <div class="row gy-4">
+            <div class="col-xl-3 col-md-6">
+                <div class="service-item service-digitization" dir="rtl">
+                  <i class="bi bi-server"></i>
+                    <h4><a href="#digitization-section">رقمنة البيانات</a></h4>
+                    <p>
+                        في مؤسسة الأمثل الذكية، نقدم حلولاً متكاملة لرقمنة البيانات تشمل أمن المعلومات، الأنظمة السحابية، وخدمات الاستضافة. نسعى لتحويل عملياتك إلى نموذج رقمي آمن وفعال من خلال حماية بياناتك باستخدام تقنيات متقدمة.
+                    </p>
+                </div>
+            </div>
+  
+            <div class="col-xl-3 col-md-6">
+                <div class="service-item service-marketing" dir="rtl">
+                    
+                    <i class="bi bi-megaphone "></i>
+                    <h4><a href="#marketing-section">التسويق الرقمي</a></h4>
+                    <p>
+                        في مؤسسة الأمثل الذكية، نقدم خدمات تسويق رقمي متكاملة تهدف إلى تعزيز حضورك الإلكتروني وتحقيق أهدافك التجارية. تشمل خدماتنا إدارة حسابات التواصل الاجتماعي باحترافية.
+                    </p>
+                </div>
+            </div>
+  
+            <div class="col-xl-3 col-md-6">
+                <div class="service-item service-networks" dir="rtl">
+                    <i class="bi bi-wifi"></i>
+                    <h4><a href="#networks-section">الشبكات والمواقع</a></h4>
+                    <p>
+                        في مؤسسة الأمثل الذكية، نقدم خدمات متخصصة في الشبكات والمواقع لضمان تجربة تقنية متكاملة. تشمل خدماتنا تصميم واجهات مستخدم مبتكرة وسهلة الاستخدام تعزز تفاعل العملاء.
+                    </p>
+                </div>
+            </div>
+  
+            <div class="col-xl-3 col-md-6">
+                <div class="service-item service-infrastructure" dir="rtl">
+                  <i class="bi bi-building-gear"></i>
+                    <h4><a href="#infrastructure-section">البنية التحتية</a></h4>
+                    <p>
+                        في مؤسسة الأمثل الذكية، نقدم حلول البنية التحتية الشاملة التي تجمع بين الأمان والكفاءة. تشمل خدماتنا تركيب أنظمة كاميرات المراقبة الحديثة لضمان مراقبة فعالة.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+  </section>
 
  <!-- Custom Styles for All Sections -->
 <style>
@@ -759,8 +796,10 @@ document.addEventListener("DOMContentLoaded", function () {
         backdrop-filter: blur(10px);
         border-radius: 15px;
         transition: all 0.3s ease;
+        font-size: 18px;
     }
 
+ 
     /* Networks Section */
     .networks-section {
         background-color: #0a2540;
@@ -775,6 +814,7 @@ document.addEventListener("DOMContentLoaded", function () {
         backdrop-filter: blur(10px);
         border-radius: 20px;
         color: white;
+        font-size: 18px;
     }
 
     /* Marketing Section */
@@ -788,6 +828,7 @@ document.addEventListener("DOMContentLoaded", function () {
         border-radius: 30px;
         overflow: hidden;
         transition: all 0.3s ease;
+        font-size: 18px;
     }
 
     /* Digitization Section */
@@ -802,6 +843,7 @@ document.addEventListener("DOMContentLoaded", function () {
         background: white;
         border-radius: 20px;
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        font-size: 18px;
     }
 
     /* Hover Effects */
@@ -817,6 +859,11 @@ document.addEventListener("DOMContentLoaded", function () {
         transition: all 0.3s ease;
         gap: 0.5rem;
     }
+
+    .section-title-wrapper p {
+      margin-top: -50px !important;
+    padding-bottom: 19px;
+    }
 </style>
 
 
@@ -826,52 +873,56 @@ document.addEventListener("DOMContentLoaded", function () {
       <div class="section-title-wrapper">
           <i class="bi bi-building-gear section-icon text-primary"></i>
           <h2 class="section-title mb-3">البنية التحتية</h2>
-          <p class="lead text-muted">حلول متكاملة للبنية التحتية تجمع بين الأمان والكفاءة</p>
+          <p class="lead text-muted" style="font-size: 24px;">حلول متكاملة للبنية التحتية تجمع بين الأمان والكفاءة</p>
       </div>
-
+      
       <div class="row g-4 mb-3 text-end">
-          <!-- Surveillance Cameras -->
-          <div class="col-lg-4 col-md-6" id="surveillance-section" data-aos="fade-up" data-aos-delay="100">
-              <div class="card h-100">
-                  <div class="card-body">
-                      <div class="d-flex align-items-center mb-4">
-                          <i class="bi bi-camera-video-fill fs-2 text-primary"></i>
-                          <h4 class="card-title mb-0 me-3">كاميرات المراقبة</h4>
-                      </div>
-                      <div class="list-check-item">
-                          <i class="bi bi-check-circle-fill text-success"></i>
-                          <span>كاميرات عالية الدقة بتقنية 4K</span>
-                      </div>
-                      <div class="list-check-item">
-                          <i class="bi bi-check-circle-fill text-success"></i>
-                          <span>تسجيل على مدار 24 ساعة</span>
-                      </div>
-                      <div class="list-check-item">
-                          <i class="bi bi-check-circle-fill text-success"></i>
-                          <span>تخزين سحابي آمن</span>
-                      </div>
-                  </div>
-              </div>
+       <!-- Surveillance Cameras -->
+<!-- Surveillance Cameras -->
+<div class="col-lg-4 col-md-6" id="surveillance-section" data-aos="fade-up" data-aos-delay="100">
+  <div class="card h-100 bg-white text-dark surveillance-card">
+      <div class="card-bg"></div>
+      <div class="card-body position-relative">
+          <div class="d-flex align-items-center mb-4">
+              <i class="bi bi-camera-video-fill fs-2 text-primary"></i>
+              <h4 class="card-title mb-0 me-3">كاميرات المراقبة</h4>
           </div>
+          <div class="list-check-item">
+              <i class="bi bi-check-circle-fill text-primary"></i>
+              <span>كاميرات عالية الدقة بتقنية 4K</span>
+          </div>
+          <div class="list-check-item">
+              <i class="bi bi-check-circle-fill text-primary"></i>
+              <span>تسجيل على مدار 24 ساعة</span>
+          </div>
+          <div class="list-check-item">
+              <i class="bi bi-check-circle-fill text-primary"></i>
+              <span>تخزين سحابي آمن</span>
+          </div>
+      </div>
+  </div>
+</div>
+    
 
           <!-- Security-Door -->
           <div class="col-lg-4 col-md-6" id="Security-Door" data-aos="fade-up" data-aos-delay="200">
-              <div class="card h-100">
-                  <div class="card-body">
+              <div class="card h-100 bg-white text-dark Security-card">
+                <div class="card-bg"></div>
+                  <div class="card-body position-relative">
                       <div class="d-flex align-items-center mb-4">
                           <i class="bi bi-shield-lock-fill fs-2 text-primary"></i>
                           <h4 class="card-title mb-0 me-3">  البوابات الامنية</h4>
                       </div>
                       <div class="list-check-item">
-                          <i class="bi bi-check-circle-fill text-success"></i>
+                          <i class="bi bi-check-circle-fill text-primary"></i>
                           <span>بصمة الأصابع والوجه</span>
                       </div>
                       <div class="list-check-item">
-                          <i class="bi bi-check-circle-fill text-success"></i>
+                          <i class="bi bi-check-circle-fill text-primary"></i>
                           <span>بطاقات ذكية</span>
                       </div>
                       <div class="list-check-item">
-                          <i class="bi bi-check-circle-fill text-success"></i>
+                          <i class="bi bi-check-circle-fill text-primary"></i>
                           <span>تقارير دخول تفصيلية</span>
                       </div>
                   </div>
@@ -888,15 +939,15 @@ document.addEventListener("DOMContentLoaded", function () {
                           <h4 class="card-title mb-0 me-3">البنية التحتية</h4>
                       </div>
                       <div class="list-check-item">
-                          <i class="bi bi-check-circle-fill text-success"></i>
+                          <i class="bi bi-check-circle-fill text-primary"></i>
                           <span>الأنظمة الأساسية التي تدعم تشغيل الأعمال والخدمات مثل الشبكات، والخوادم، والأنظمة الأمنية</span>
                       </div>
                       <div class="list-check-item">
-                          <i class="bi bi-check-circle-fill text-success"></i>
+                          <i class="bi bi-check-circle-fill text-primary"></i>
                           <span>تحسين أداء النظام من خلال استخدام تقنيات حديثة</span>
                       </div>
                       <div class="list-check-item">
-                          <i class="bi bi-check-circle-fill text-success"></i>
+                          <i class="bi bi-check-circle-fill text-primary"></i>
                           <span> ضمان الاستدامة والكفاءة في توفير الخدمات والموارد </span>
                       </div>
                   </div>
@@ -915,15 +966,15 @@ document.addEventListener("DOMContentLoaded", function () {
                       <h4 class="card-title mb-0 me-3">نظام إدارة المباني (BMS) </h4>
                   </div>
                   <div class="list-check-item">
-                      <i class="bi bi-check-circle-fill text-success"></i>
+                      <i class="bi bi-check-circle-fill text-primary"></i>
                       <span>    مراقبة وتحكم في الأنظمة المختلفة مثل الإضاءة، التكييف، والأمن</span>
                   </div>
                   <div class="list-check-item">
-                      <i class="bi bi-check-circle-fill text-success"></i>
+                      <i class="bi bi-check-circle-fill text-primary"></i>
                       <span> تحسين كفاءة الطاقة وتقليل التكاليف التشغيلية   </span>
                   </div>
                   <div class="list-check-item">
-                      <i class="bi bi-check-circle-fill text-success"></i>
+                      <i class="bi bi-check-circle-fill text-primary"></i>
                       <span>  توفير بيئة مريحة وآمنة للمستخدمين عبر التحكم الذكي</span>
                   </div>
               </div>
@@ -938,15 +989,15 @@ document.addEventListener("DOMContentLoaded", function () {
                     <h4 class="card-title mb-0 me-3"> التحكم الذكي بالمنازل</h4>
                 </div>
                 <div class="list-check-item">
-                    <i class="bi bi-check-circle-fill text-success"></i>
+                    <i class="bi bi-check-circle-fill text-primary"></i>
                     <span>    إدارة الإضاءة، والتكييف، والأجهزة الكهربائية عن بعد</span>
                 </div>
                 <div class="list-check-item">
-                    <i class="bi bi-check-circle-fill text-success"></i>
+                    <i class="bi bi-check-circle-fill text-primary"></i>
                     <span>تحسين استهلاك الطاقة من خلال أنظمة ذكية    </span>
                 </div>
                 <div class="list-check-item">
-                    <i class="bi bi-check-circle-fill text-success"></i>
+                    <i class="bi bi-check-circle-fill text-primary"></i>
                     <span>  تكامل مع الأجهزة المحمولة لسهولة التحكم والمراقبة</span>
                 </div>
             </div>
@@ -962,15 +1013,15 @@ document.addEventListener("DOMContentLoaded", function () {
                   <h4 class="card-title mb-0 me-3">الأجهزة البيومترية</h4>
               </div>
               <div class="list-check-item">
-                  <i class="bi bi-check-circle-fill text-success"></i>
+                  <i class="bi bi-check-circle-fill text-primary"></i>
                   <span>    تحديد الهوية باستخدام الخصائص البيولوجية مثل بصمات الأصابع أو ملامح الوجه  </span>
               </div>
               <div class="list-check-item">
-                  <i class="bi bi-check-circle-fill text-success"></i>
+                  <i class="bi bi-check-circle-fill text-primary"></i>
                   <span> تعزيز الأمان من خلال التحقق الفريد والموثوق</span>
               </div>
               <div class="list-check-item">
-                  <i class="bi bi-check-circle-fill text-success"></i>
+                  <i class="bi bi-check-circle-fill text-primary"></i>
                   <span>  تطبيقات في الحضور والانصراف، التحكم في الوصول، وتسجيل الدخول
                   </span>
               </div>
@@ -989,7 +1040,7 @@ document.addEventListener("DOMContentLoaded", function () {
       <div class="section-title-wrapper">
           <i class="bi bi-diagram-3 section-icon text-info"></i>
           <h2 class="section-title mb-3 text-white">الشبكات والمواقع</h2>
-          <p class="lead opacity-75">حلول شبكات متطورة وتصميم مواقع احترافية</p>
+          <p class="lead opacity-75" style="font-size: 24px;">حلول شبكات متطورة وتصميم مواقع احترافية</p>
       </div>
       <!--Row 1-->
       <div class="row g-4 mb-3">
@@ -1132,7 +1183,7 @@ document.addEventListener("DOMContentLoaded", function () {
       <div class="section-title-wrapper">
           <i class="bi bi-megaphone section-icon text-danger"></i>
           <h2 class="section-title mb-3">التسويق الرقمي</h2>
-          <p class="lead">استراتيجيات تسويقية مبتكرة لنمو أعمالك</p>
+          <p class="lead" style="font-size: 24px;">استراتيجيات تسويقية مبتكرة لنمو أعمالك</p>
       </div>
 
       <div class="row g-4">
@@ -1371,7 +1422,7 @@ document.addEventListener("DOMContentLoaded", function () {
 <div class="section-title-wrapper">
 <i class="bi bi-database-fill section-icon text-primary"></i>
 <h2 class="section-title mb-3" data-aos="fade-up">رقمنة البيانات</h2>
-<p class="lead text-muted">حلول متكاملة لتحويل وحماية بياناتك الرقمية</p>
+<p class="lead text-muted" style="font-size: 24px;">حلول متكاملة لتحويل وحماية بياناتك الرقمية</p>
 </div>
 
 <div class="row g-4">
@@ -1451,102 +1502,112 @@ document.addEventListener("DOMContentLoaded", function () {
 </div>
 </section>
 
+<!-- قسم الإحصائيات -->
+<section id="stats" class="stats section">
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+    <div class="row gy-4 align-items-center">
+      <div class="col-lg-5">
+        <img src="assets/img/stats-img.svg" alt="إحصائياتنا" class="img-fluid" />
+      </div>
 
-      <!-- Stats Section -->
-      <section id="stats" class="stats section">
-        <div class="container" data-aos="fade-up" data-aos-delay="100">
-          <div class="row gy-4 align-items-center">
-            <div class="col-lg-5">
-              <img src="assets/img/stats-img.svg" alt="" class="img-fluid" />
-            </div>
-
-            <div class="col-lg-7">
-              <div class="row gy-4">
-                <div class="col-lg-6">
-                  <div class="stats-item d-flex">
-                    <i class="bi bi-emoji-smile flex-shrink-0"></i>
-                    <div>
-                      <span
-                        data-purecounter-start="0"
-                        data-purecounter-end="232"
-                        data-purecounter-duration="1"
-                        class="purecounter"
-                      ></span>
-                      <p>
-                        <strong>Happy Clients</strong>
-                        <span>consequuntur quae</span>
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <!-- End Stats Item -->
-
-                <div class="col-lg-6">
-                  <div class="stats-item d-flex">
-                    <i class="bi bi-journal-richtext flex-shrink-0"></i>
-                    <div>
-                      <span
-                        data-purecounter-start="0"
-                        data-purecounter-end="521"
-                        data-purecounter-duration="1"
-                        class="purecounter"
-                      ></span>
-                      <p>
-                        <strong>Projects</strong>
-                        <span>adipisci atque cum quia aut</span>
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <!-- End Stats Item -->
-
-                <div class="col-lg-6">
-                  <div class="stats-item d-flex">
-                    <i class="bi bi-headset flex-shrink-0"></i>
-                    <div>
-                      <span
-                        data-purecounter-start="0"
-                        data-purecounter-end="1453"
-                        data-purecounter-duration="1"
-                        class="purecounter"
-                      ></span>
-                      <p>
-                        <strong>Hours Of Support</strong>
-                        <span>aut commodi quaerat</span>
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <!-- End Stats Item -->
-
-                <div class="col-lg-6">
-                  <div class="stats-item d-flex">
-                    <i class="bi bi-people flex-shrink-0"></i>
-                    <div>
-                      <span
-                        data-purecounter-start="0"
-                        data-purecounter-end="32"
-                        data-purecounter-duration="1"
-                        class="purecounter"
-                      ></span>
-                      <p>
-                        <strong>Hard Workers</strong>
-                        <span>rerum asperiores dolor</span>
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <!-- End Stats Item -->
+      <div class="col-lg-7">
+        <div class="row gy-4">
+          <!-- شركاء النجاح -->
+          <div class="col-lg-6">
+            <div class="stats-item d-flex">
+              <i class="bi bi-people flex-shrink-0"></i> <!-- أيقونة الأشخاص المتعاونين -->
+              <div>
+                <span 
+                  data-purecounter-start="0" 
+                  data-purecounter-end="14" 
+                  data-purecounter-duration="1" 
+                  class="purecounter">
+                </span>
+                <p>
+                  <strong style="font-size: 17px;">شركاء النجاح
+                  نتعاون مع نخبة من الشركاء المتميزين</strong>
+                </p>
               </div>
             </div>
           </div>
-        </div>
-      </section>
-      <!-- /Stats Section -->
+          <!-- نهاية عنصر الإحصائيات -->
 
+          <!-- أعمالنا -->
+          <div class="col-lg-6">
+            <div class="stats-item d-flex">
+              <i class="bi bi-briefcase flex-shrink-0"></i> <!-- أيقونة الحقيبة ترمز للأعمال -->
+              <div>
+                <span 
+                  data-purecounter-start="0" 
+                  data-purecounter-end="67" 
+                  data-purecounter-duration="1" 
+                  class="purecounter">
+                </span>
+                <p>
+                  <strong style="font-size: 17px;" >أعمالنا
+                  مشاريع ناجحة تحقق قيمة حقيقية</strong>
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- نهاية عنصر الإحصائيات -->
+
+          <!-- عملاؤنا -->
+          <div class="col-lg-6">
+            <div class="stats-item d-flex">
+              <i class="bi-star flex-shrink-0"></i> <!-- أيقونة الإعجاب للعملاء السعداء -->
+              <div>
+                <span 
+                  data-purecounter-start="0" 
+                  data-purecounter-end="56" 
+                  data-purecounter-duration="1" 
+                  data-purecounter-suffix="+" 
+                  class="purecounter">
+                </span>
+                <p>
+                  <strong style="font-size: 17px;">عملاؤنا
+                  نفخر بثقة عملائنا ورضاهم</strong>
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- نهاية عنصر الإحصائيات -->
+
+          <!-- مشاريع تحت التنفيذ -->
+          <div class="col-lg-6">
+            <div class="stats-item d-flex">
+              <i class="bi-rocket flex-shrink-0"></i> <!-- أيقونة المطرقة للمشاريع الجارية -->
+              <div>
+                <span 
+                  data-purecounter-start="0" 
+                  data-purecounter-end="8" 
+                  data-purecounter-duration="1" 
+                  class="purecounter">
+                </span>
+                <p>
+                  <strong style="font-size: 17px;">مشاريع تحت التنفيذ
+                  نواصل الابتكار لتحقيق المزيد من الإنجازات</strong>
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- نهاية عنصر الإحصائيات -->
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /قسم الإحصائيات -->
+
+
+<style>
+  .purecounter::after {
+  content: "+";
+}
+</style>
     
 
-     
+<!--      
       <section id="alt-services" class="alt-services section">
         <div class="container" data-aos="fade-up" data-aos-delay="100">
           <div class="row gy-4">
@@ -1642,7 +1703,7 @@ document.addEventListener("DOMContentLoaded", function () {
    
           </div>
         </div>
-      </section>
+      </section> -->
 
 
       
@@ -1651,7 +1712,7 @@ document.addEventListener("DOMContentLoaded", function () {
         <!-- Section Title -->
         <div class="container section-title" data-aos="fade-up">
           <h2>آراء عملائنا</h2>
-          <p>
+          <p style="font-size: 24px;">
             آراء عملائنا هي أولويتنا! نحن نفخر بتقديم خدماتنا التي تلبي احتياجاتهم وتحقق رضاهم الكامل
           </p>
         </div>
@@ -1733,7 +1794,7 @@ document.addEventListener("DOMContentLoaded", function () {
         <!-- Section Title -->
         <div class="container section-title" data-aos="fade-up">
           <h2>تواصل معنا</h2>
-          <p>
+          <p style="font-size: 24px;">
             تواصل معنا الآن للاستفادة من خدماتنا المميزة! نحن هنا لتلبية احتياجاتك وتقديم الحلول التي تفوق توقعاتك
           </p>
         </div>
@@ -1767,7 +1828,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 <i class="bi bi-telephone flex-shrink-0"></i>
                 <div>
                   <h3>رقم الهاتف</h3>
-                  <p>+1 5589 55488 55</p>
+                  <p>9200 14839</p>
                 </div>
               </div>
               <!-- End Info Item -->
@@ -1780,7 +1841,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 <i class="bi bi-envelope flex-shrink-0"></i>
                 <div>
                   <h3>البريد الإلكتروني</h3>
-                  <p>info@example.com</p>
+                  <p>support@optsmart.net</p>
                 </div>
               </div>
               <!-- End Info Item -->
@@ -1862,15 +1923,13 @@ document.addEventListener("DOMContentLoaded", function () {
         <div class="copyright text-center">
           <p>
             © <span>Copyright</span>
-            <strong class="px-1 sitename">Vesperr</strong>
+            <strong class="px-1 sitename">OPTIMUM</strong>
             <span>All Rights Reserved</span>
           </p>
         </div>
         <div class="social-links d-flex justify-content-center">
-          <a href=""><i class="bi bi-twitter-x"></i></a>
-          <a href=""><i class="bi bi-facebook"></i></a>
-          <a href=""><i class="bi bi-instagram"></i></a>
-          <a href=""><i class="bi bi-linkedin"></i></a>
+          <a href="https://www.tiktok.com/@optimumsmart?_t=ZS-8tm1TYvU23k&_r=1" target="_blank"><i class="bi bi-tiktok"></i></a>
+          <a href="https://www.instagram.com/smartoptimum/?igsh=MWl3d2NkZnUzZmpvcA%3D%3D#" target="_blank"><i class="bi bi-instagram"></i></a>
         </div>
         <div class="credits">
 
